@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="title">
+		</div>
+		<table class="table" cellspacing="0">
+			<tr>
+				<td width="33%" bgcolor="#bd0500">
+					<div class="wrapper">
+						<img src="image/red.png"/>
+						<div class="hover" onclick="onMarioClick()">
+							<iframe class="iframe" id="c9bc7520-3ee2-414b-a782-915cd9073b02" src="https://www.vectary.com/viewer/v1/?model=c9bc7520-3ee2-414b-a782-915cd9073b02&env=redwall&turntable=3" height="100%" width="100%" frameborder="0"></iframe>
+						</div>
+					</div>
+				</td>
+				<td width="33%"  bgcolor="#DCB440">
+					<div class="wrapper">
+						<img src="image/yellow.png"/>
+						<div class="hover" onclick="onStarClick()">
+							<iframe  class="iframe" id="1c682996-0865-45b5-bb6d-c3ce26d03535" src="https://www.vectary.com/viewer/v1/?model=1c682996-0865-45b5-bb6d-c3ce26d03535&env=redwall&turntable=3" height="100%" width="100%" frameborder="0"></iframe>
+						</div>
+					</div>
+				</td>
+				<td width="33%" bgcolor="#679732">
+					<div class="wrapper">
+						<img src="image/green.png"/>
+						<div class="hover" onclick="onFlowerClick()">
+							<iframe class="iframe" id="f7a9e236-2b40-499c-9cfe-57b44dc0f084" src="https://www.vectary.com/viewer/v1/?model=f7a9e236-2b40-499c-9cfe-57b44dc0f084&env=redwall&turntable=3" height="100%" width="100%" frameborder="0"></iframe>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="title">
+			<img src="image/title.png"/>
+		</div>
+		<div class="popup">
+			<div id="resultPopup" class="popuptext">
+				<img src="image/popuo_close.png" class="close" onclick="toggleResultWindow()"/>
+				<img src="image/vs.png" class="vs"/>
+				<img id="resultTitle" src="image/GoodJob!.png" class="goodjob"/>
+				<img id="selectedItem" src="image/mario.png" class="selected"/>
+				<img id="randomItem" src="image/star.png" class="random"/>
+				<img id="restart" src="image/restart.png" class="middlebottom" onclick="toggleResultWindow()"/>
+				<img id="icon" src="image/win_icon.png" class="lefttop"/>
+			</div>
+			<div class="help" id="helpPopup">
+			</div>
+		</div>
+		<div>
+			<img src="image/icon_help.png" class="close" onclick="onHelpClick()"/>
+		</div>
+		<script type="text/javascript">
+var popup = document.getElementById("resultPopup");
+
+function onHelpClick() {
+	var helpPopup = document.getElementById("helpPopup");
+	helpPopup.classList.toggle("show");
+};
+
+function onMarioClick() {
+	loadResult(0);
+	toggleResultWindow();
+};
+
+function onStarClick(){
+	loadResult(1);
+	toggleResultWindow();
+};
+
+function onFlowerClick(){
+	loadResult(2);
+	toggleResultWindow();
+};
+
+function toggleResultWindow() {
+	popup.classList.toggle("show");
+};
+
+function loadResult(selected){
+	var items = ["image/mario.png", "image/star.png", "image/flower.png"];
+	var random = Math.floor(Math.random() * Math.floor(3));
+	var win = (selected - random + 1) % 3 == 0
+	var resultTitle = document.getElementById("resultTitle");
+	if(win) {
+		resultTitle.src = "image/GoodJob!.png"
+		document.getElementById("icon").src = "image/win_icon.png";
+	} else if(selected - random == 0){
+		resultTitle.src = "image/tie.png"
+		document.getElementById("icon").src = "";
+	} else {
+		resultTitle.src = "image/badluck.png"
+		document.getElementById("icon").src = "image/lose_icon.png";
+	}
+	document.getElementById("selectedItem").src = items[selected];
+	document.getElementById("randomItem").src = items[random];
+};
+		</script>
+	</body>
+</html>
