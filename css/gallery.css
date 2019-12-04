@@ -13,9 +13,10 @@
 
 }
 p{
-    font-weight: 100;
-    line-height: 20px;
-    font-size: 12px;
+    font-weight: 300;
+    padding-top: 20px;
+    line-height: 24px;
+    font-size: 14px;
     color: #4F4F4F;
     margin-left: 400px;
     margin-right: 60px;
