@@ -1,24 +1,45 @@
-.gallery{
-    margin-top: 60px;
-    margin-bottom: 40px;
-    width: 700px;
-    position: relative;
-    float:right;
+.header {
+    padding-bottom: 20px;
 }
-.gllerytitle{
-  
-    
-    width: 20%;
-    height: auto;
+section {
+    margin-left: auto;
+    width: 62%;
+}
 
+.logo {
+    float: none;
 }
-p{
-    font-weight: 300;
-    padding-top: 20px;
-    line-height: 24px;
-    font-size: 14px;
-    color: #4F4F4F;
-    margin-left: 400px;
-    margin-right: 60px;
-    text-align: left;
-}  
+
+.gallery {
+    padding: 20px 0;
+    width: 100%;
+}
+
+.gallerytitle {
+    padding: 20px 0;
+    width: 388px;
+}
+
+p {
+    font-family: Roboto-Light;
+font-size: 14px;
+color: #3D3D3D;
+letter-spacing: 0.64px;
+line-height: 25px;
+width: 646px;
+}
+
+h2 {
+    font-family: Montserrat-Bold;
+font-size: 20px;
+color: #090909;
+letter-spacing: 1px;
+line-height: 58px;
+font-weight: bold;
+margin: 0;;
+}
+
+.map {
+    width: 645px;
+    margin-bottom: 80px;
+}

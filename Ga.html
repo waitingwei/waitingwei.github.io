@@ -9,18 +9,21 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,700,300" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/gallery.css" />
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
   <div class="header">
-    <a href="index.html">
-      <img class="logo" src="img/logo.png">
-    </a>
+    <div class="title">ASIAN ART MUSUME</ul>
+      <a href="index.html">
+        <img class="logo" src="img/logo.png">
+      </a>
+    </div>
+  </div>
+
   <nav role='navigation'>
     <div id="menuToggle">
-      <input type="checkbox" />
+      <input type="checkbox" class="menuT" />
       <span></span>
       <span></span>
       <span></span>
@@ -40,25 +43,14 @@
       </ul>
     </div>
   </nav>
+
+  <div style="position: relative; margin: 0 100px; height: 1860px;">
+    <img style="width: 300px; margin-top: 50px;" src="./img/ga_title.png">
+    <img style="width: 563px; position: absolute; right: 0; top: 130px;" src="./img/Poem.png">
+    <img style="width: 563px; position: absolute; left: 0; top: 756px;" src="./img/Chicken.png">
+    <img style="width: 563px; position: absolute; right: 0; top: 1006px;" src="./img/Dog.png">
   </div>
 
-  <section>
-    <div>
-      <img class="gallery" src="./img/galleryscreen.jpg" alt="gallery">
-    </div>
-    <div>
-      <img class="gallerytitle" src="./img/gallery_title.png" alt="gallery">
-    </div>
-    <p>
-        Asian Art Museum is in the center of San Francisco. This museum opened in 1966 as a wing of the M.H. de Young
-        Memorial Museum in Golden Gate Park. Avery Brundage’s collector of Asian art gave birth to the Asian Art Museum
-        in 1975, and then Chong-Moon Lee made a $15 million donation to launch the funding campaign for a new building
-        for the museum.
-    </p>
-
-    <h2>Location</h2>
-    <img class="map" src="./img/map.png" alt="">
-  </section>
   <div class="bottom">
     <ul>
       <li>About the Gallery</li>
@@ -68,6 +60,13 @@
     </ul>
     <div class="copyright">© Copyright 2019 Asian Art Museum</div>
   </div>
+
+  <style>
+    .header {
+      padding-bottom: 20px;
+    }
+  </style>
+
   <script src="./js/slider.js"></script>
 </body>
 

@@ -1,155 +1,230 @@
-body
-{
+body {
   margin: 0;
   padding: 0;
   background: #ffffff;
   color: #000000;
   font-family: "Montserrat", bold;
-  
+
   overflow-x: hidden;
 }
-.header{
+.header {
   padding-top: 44px;
   clear: both;
 }
 .title {
-  font-family: "Montserrat"; 
+  font-family: "Montserrat";
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-
 }
-.logo{
+.logo {
   float: left;
-  width: 38px;
-  margin-left: 40px;
+    width: 74px;
+    margin-left: 40px;
+    margin-top: -15px;
 }
-.homepic{
+.homepic {
   padding-top: 20px;
   width: 100%;
   height: auto;
 }
-a
-{
+a {
   text-decoration: none;
   color: #ffffff;
-  
+
   transition: color 0.3s ease;
 }
 
-a:hover
-{
+a:hover {
   color: rgb(143, 143, 143);
 }
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: absolute;
   top: 50px;
   right: 50px;
-  
-  z-index: 1;
-  
+
+  z-index: 100;
+
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
-  opacity: 0; 
-  z-index: 2; 
-  
+
+  opacity: 0;
+  z-index: 2;
+
   -webkit-touch-callout: none;
 }
 
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
+
   background: #000000;
   border-radius: 3px;
-  
+
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #fcfcfc;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
 }
-#menu
-{
+#menu {
   position: absolute;
-  width: 300px;
-  height: 1024px;
-  margin: -100px 0 0 0;
-  padding: 50px;
-  padding-top: 125px;
+  width: 481px;
+  height: 100vh;
+  max-height: 100vh;
+  margin: -75px 0 0 0;
+  padding: 36px;
+  padding-top: 225px;
   right: -100px;
-  
+
   background: #000000;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  box-sizing: border-box;
 }
 
-#menu li
-{
-  padding: 10px 0;
+#menu li {
+  position: relative;
+  padding: 0 0 34px;
   font-size: 22px;
+  font-family: Montserrat-Bold;
+  font-size: 30px;
+  color: #ffffff;
+  letter-spacing: 2.5px;
+  font-weight: bolder;
+  opacity: 0.8;
+  line-height: 37px;
+  cursor: pointer;
+  transition:all 1s ease-in-out
+}
+
+#menu li:hover {
+  opacity: 1;
+  transition:all 1s ease-in-out
+}
+
+#menu li:hover:after {
+  position: absolute;
+  content: "";
+  width: 320px;
+  height: 14px;
+  left: 0;
+  top: 38px;
+}
+
+.red li:hover:after {
+  background: #f43051;
+}
+
+.yellow li:hover:after {
+  background: #ffb812;
+}
+.blue li:hover:after {
+  background: #3c83ec;
+}
+.green li:hover:after {
+  background: #55bd47;
+}
+
+.slider {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  z-index: 100;
+  animation: move 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes move {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 100%;
+  }
 }
 
 /*
  * And let's fade it in from the left
  */
-#menuToggle input:checked ~ ul
-{
-  transform: scale(1.0, 1.0);
+#menuToggle input:checked ~ ul {
+  transform: scale(1, 1);
   opacity: 1;
+}
+
+.bottom {
+  padding: 119px 0 41px;
+  background: #090909;
+}
+
+.bottom ul {
+  padding: 0 204px;
+  margin-bottom: 37px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom ul li {
+  opacity: 0.8;
+  font-family: Roboto-Medium;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 1.33px;
+  list-style: none;
+  line-height: 19px;
+}
+
+.bottom .copyright {
+  opacity: 0.8;
+  font-family: Roboto-Medium;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 1.33px;
+  text-align: center;
 }

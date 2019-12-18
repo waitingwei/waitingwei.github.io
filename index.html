@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ASIAN ART MUSUME</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <link
     href="http://fonts.googleapis.com/css?family=Roboto:400,100,700,300"
@@ -12,30 +12,43 @@
     type="text/css"
   />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-  <div>
     <div class="header">
-        <div class="title">ASIAN ART MUSUME</ul>
-          <a href="index.html">
+      <div class="title">ASIAN ART MUSUME</ul>
+        <a href="index.html">
         <img class="logo" src="img/logo.png">
-      </a>
-  </div>
+        </a>
+      </div>
+    </div>
+
     <nav role='navigation'>
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="Gallery.html"><li>ABOUT THE GALLERY</li></a>
-            <a href="#"><li>ABOUT THE ARTIST</li></a>
-            <a href="#"><li>ABOUT THE ART</li></a>
-            <a href="#"><li>GALLERY</li></a>
-          </ul>
-        </div>
-      </nav>
-    <img class="homepic" src="img/home.jpg">
-       
+      <div id="menuToggle">
+        <input type="checkbox" class="menuT" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a data-href="Gallery.html" class="red" data-color="red"><li class="active">ABOUT THE GALLERY</li></a>
+          <a data-href="Artist.html" class="yellow" data-color="yellow"><li>ABOUT THE ARTIST</li></a>
+          <a data-href="Art.html" class="blue" data-color="blue"><li>ABOUT THE ART</li></a>
+          <a data-href="Ga.html" class="green" data-color="green"><li>GALLERY</li></a>
+        </ul>
+      </div>
+    </nav>
+    <div style="font-size: 0;">
+      <img class="homepic" src="img/home.jpg">
+    </div>
+    <div class="bottom">
+      <ul>
+        <li>About the Gallery</li>
+        <li>About the Artist</li>
+        <li>About the Art</li>
+        <li>Gallery</li>
+      </ul>
+      <div class="copyright">© Copyright 2019 Asian Art Museum</div>
+    </div>
+  <script src="./js/slider.js"></script>
 </body>
 </html>

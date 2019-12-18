@@ -1,69 +1,81 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-  <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width" />
+<html lang="en">
 
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Roboto:400,100,700,300"
-      rel="stylesheet"
-      type="text/css"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ASIAN ART MUSUME</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,700,300" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
 
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-  </head>
-
-  <body>
-    <div id="panel" class="closed clearfix">
-      <nav>
-        <ul>
-          <li><a href="index.html" id="one">Home</a></li>
-          <li><a href="Artist.html" class="active"  id="two">Artist</a></li>
-          <li><a href="Art.html" id="three">Art</a></li>
-          <li><a href="Gallery.html" id="four">Gallery</a></li>
-          <li><a href="" id="four"></a></li>
-        </ul>
-      </nav>
-      <div id="tab">
-        <div class="wrapper">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-
-     
-      <section>
-        <h1><font face="Montserrat" color="black">Artist</font></h1>
-        <p><img src="./img/artistscreen.jpg" alt="" /></p>
-        <p>
-          <font face="Montserrat" color="black">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with
-            the release of Letraset sheets containing Lorem Ipsum passages, and
-            more recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum.
-          </font>
-        </p>
-      </section>
+<body>
+  <div class="header">
+    <div class="title">ASIAN ART MUSUME</ul>
+      <a href="index.html">
+        <img class="logo" src="img/logo.png">
+      </a>
     </div>
+  </div>
 
-    <script src="js/main.js"></script>
-  </body>
+  <nav role='navigation'>
+    <div id="menuToggle">
+      <input type="checkbox" class="menuT" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <a data-href="Gallery.html" class="red" data-color="red">
+          <li class="active">ABOUT THE GALLERY</li>
+        </a>
+        <a data-href="Artist.html" class="yellow" data-color="yellow">
+          <li>ABOUT THE ARTIST</li>
+        </a>
+        <a data-href="Art.html" class="blue" data-color="blue">
+          <li>ABOUT THE ART</li>
+        </a>
+        <a data-href="Ga.html" class="green" data-color="green">
+          <li>GALLERY</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+  <div style="font-size: 0;">
+    <img class="homepic" src="img/Artist.png">
+  </div>
+
+  <div style="max-width: 924px; margin: 0 auto 90px;">
+    <img style="width: 329px; margin: 40px 0 20px 0;" src="./img/artist_title.png" alt="gallery">
+    <p class="text"> Saburo Hasegawa (1906-1957) was a Japanese calligrapher, painter and early advocate of
+      abstraction.In his paintings, Hasegawa merged the gesturalism of Japanese calligraphy, of which he was a master,
+      with the spontaneity of Western abstraction.</p>
+  </div>
+
+  <div class="bottom">
+    <ul>
+      <li>About the Gallery</li>
+      <li>About the Artist</li>
+      <li>About the Art</li>
+      <li>Gallery</li>
+    </ul>
+    <div class="copyright">© Copyright 2019 Asian Art Museum</div>
+  </div>
+
+  <script src="./js/slider.js"></script>
+  <style>
+    .text {
+      width: 646px;
+      opacity: 0.8;
+      font-family: Roboto-Light;
+      font-size: 14px;
+      color: #090909;
+      letter-spacing: 0.64px;
+      line-height: 25px;
+    }
+  </style>
+</body>
+
 </html>
